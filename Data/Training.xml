@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Branches>
+	<Branch>
+		<BranchName>training</BranchName>
+		<BranchVersion>3.0.1.0</BranchVersion>
+		<BranchRevision>HEAD</BranchRevision>
+		<BranchDisplayName>Training Env - OV 3.0.1.0</BranchDisplayName>
+		<BranchDescription>OneVue Training environment, database hosted on SSYDNSQL016.</BranchDescription>
+		<BranchContact>Lawrence Fung/Kin Cheung</BranchContact>
+	</Branch>
+</Branches>

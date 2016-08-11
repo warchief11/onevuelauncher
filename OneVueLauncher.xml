@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OneVueLauncher</name>
+    </assembly>
+    <members>
+        <member name="T:OneVueLauncher.Branch">
+            <summary>
+            Launcher Branch Properties.  These are loaded from the branches.xml file.
+            </summary>
+            <remarks>
+            <code region="History" lang="other" title="History">
+            Date        Developer       Description
+            ----------- --------------- ------------------------------------------------------------------
+            30-Jul-2013 CMadden         Added BranchWorkingDirectory
+            </code>
+            </remarks>
+        </member>
+        <member name="T:OneVueLauncher.Extensions.Exception">
+            <summary>
+            Extension methods for Exceptions.
+            <example>
+            E.g. usage:
+            <code>
+            using Challenger.OneVue.Util.ExtensionMethods;
+            
+                ...
+                catch(Exception ex){
+                    error_msg = ex.Format()
+                }
+            </code>
+            example message format:
+            
+            System.OverflowException was caught 
+            Message=Arithmetic operation resulted in an overflow. 
+            Source=Challenger.OneVue.Util.DevTest 
+            Stacktrace:    at Challenger.OneVue.Util.DevTest.Extensions_DevTest.Extensions_DevTest_Exceptions() 
+            in C:\svn\OneVue\branches\tran_batches_2013\Challenger.OneVue.Util\Challenger.OneVue.Util.DevTest\Extensions_DevTest.vb:line 44
+            
+            </example>
+            </summary>
+            <remarks>
+            <code region="History" lang="other" title="History">
+            Date        Developer       Description
+            ----------- --------------- ------------------------------------------------------------------
+            30-Jul-2013 CMadden         Original
+            </code>
+            </remarks>
+        </member>
+        <member name="M:OneVueLauncher.Extensions.Exception.Format(System.Exception)">
+            <summary>
+            Extends a System.Exception object to add a formatted string output.
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OneVueLauncher.frmCheckout">
+            <summary>
+            frmCheckout - processes SVN checkouts and displays progress.
+            </summary>
+            <remarks>
+            <code region="History" lang="other" title="History">
+            Date          Developer       Description
+            -----------   --------------- ------------------------------------------------------------------
+            24-Jul-2013   CMadden         Original
+            10-Dec-2013   CMadden         Fixed bug calculating the number of changed files for progress in 
+                                          bgrLongProcess_DoWork().
+            14-Jul-2014   CMadden         Added merge conflict resolution for Config.ini files.
+            </code>
+            </remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.bgrLongProcess_ProgressChanged(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            Displays the progress.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.bgrLongProcess_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+            <summary>
+            Background worker process RunWorkerCompleted handler.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.svn_client_Notify(System.Object,SharpSvn.SvnNotifyEventArgs)">
+            <summary>
+            The SVN Notify callback handler. Updates progress details.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.bgrLongProcess_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            Background worker process DoWork handler.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.update_txtCheckoutDetail(System.String)">
+            <summary>
+            Adds the text to the txtCheckoutDetail TextBox.
+            </summary>
+            <param name="text"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.UpdateTextBox(System.Windows.Forms.TextBox@,System.String)">
+            <summary>
+            Adds the text to the supplied TextBox control.
+            </summary>
+            <param name="TextBoxControl"></param>
+            <param name="text"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cancels the checkout operation.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.SafeCloseForm">
+            <summary>
+            Closes this form.
+            </summary>
+            <remarks>
+            This method should be used to avoid a potential InvalidOperationException 
+            when attempting to close the form from other threads.
+            </remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.close_form">
+            <summary>
+            Closes this form.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.frmCheckout_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form load handler.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmCheckout.IsValid">
+            <summary>
+            Checkout validation routine.
+            </summary>
+            <returns>Boolean True when all required data has been provided, false otherwise.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:OneVueLauncher.frmCheckout.RepositoryURI">
+            <summary>
+            The branch repository URI
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:OneVueLauncher.frmCheckout.Branch">
+            <summary>
+            The required branch name
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:OneVueLauncher.frmCheckout.Revision">
+            <summary>
+            The required revision number or name
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:OneVueLauncher.frmCheckout.WorkingDir">
+            <summary>
+            The checkout working directory path
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:OneVueLauncher.frmCheckout.CheckedOutRevision">
+            <summary>
+            The retrieved branch revision number
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:OneVueLauncher.frmCheckout.ErrorMessage">
+            <summary>
+            An error message set to indicate an issue with processing
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.LoadData(System.String)">
+            <summary>
+            Load the XML Data
+            </summary>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.GetRandomString(System.Int32)">
+            <summary>
+            Generates a random string of alpha-numeric characters of the specified length.
+            </summary>
+            <param name="length">Length of the returned string</param>
+            <returns>A random string of alpha-numeric characters</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.LoadBranchCombo">
+            <summary>
+            Load the combo that displays the list of Branches
+            </summary>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.LoadTrainingCombo">
+            <summary>
+            Load the combo that displays the list of Branches
+            </summary>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.radProduction_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            If Production radio button activated 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.frmLauncher_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form Load
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.ShowUsage">
+            <summary>
+            Displays program usage and quits.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.ShowUsage(System.String,System.Boolean)">
+            <summary>
+            Displays program usage and quits if required.
+            </summary>
+            <param name="Message">An optional message to display.</param>
+            <param name="CloseForm">Closes the form when True</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.GetVersionNo">
+            <summary>
+            Get the Version No
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.cboBranches_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Combo box index changed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.cboTraining_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Combo box index changed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.UpdateBranch">
+            <summary>
+            Call the batch file to update
+            </summary>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.ExecuteBranch">
+            <summary>
+            Launches the currently selected branch executable.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.validate_branch_revision(System.Nullable{System.Int64})">
+            <summary>
+            If a revision number is specified for the branch, check if it 
+            is the same as the supplied revision number.
+            </summary>
+            <param name="revision">The retrieved revision number</param>
+            <returns>
+            Boolean True if the supplied revision is the same as 
+            that specified on the form, False otherwise.
+            </returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.DeleteBranch">
+            <summary>
+            Deletes the current selected branch working directory.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.get_current_working_copy_path">
+            <summary>
+            Gets the working directory of the currently selected branch.
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.DeleteDirectory(System.String)">
+            <summary>
+            Deletes a directory tree ensuring any read-only files are also deleted
+            </summary>
+            <param name="target_dir"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            OK button clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Close the App
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.chkForceRefresh_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            chkForceRefresh CheckedChanged handler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.update_revision_info">
+            <summary>
+            Gets the current selected branch info.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.set_working_copy_current_status(System.Boolean)">
+            <summary>
+            Updates the Working Copy Status labels.
+            </summary>
+            <param name="IsCurrent"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:OneVueLauncher.frmLauncher.is_working_copy_version(System.String,System.Int64)">
+            <summary>
+            Verifies that the supplied SVN working copy path is at the same revision as the supplied value.
+            </summary>
+            <param name="WorkingCopyPath"></param>
+            <param name="Revision"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:OneVueLauncher.Program">
+            <summary>
+            
+            </summary>
+            <remarks>
+            <code region="History" lang="other" title="History">
+            Date        Developer           Description
+            ----------- ------------------- ------------------------------------------------------------------
+            12-Aug-2016 NSingh              Original
+            </code>
+            </remarks>
+        </member>
+        <member name="M:OneVueLauncher.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>

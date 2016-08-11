@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Branches>
+  <Branch>
+    <BranchName>onevue_reporting</BranchName>
+    <BranchVersion>3.25.0.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>OneVue Reporting</BranchDisplayName>
+    <BranchDescription>Reporting Database</BranchDescription>
+    <BranchContact>Craig Madden, Kin Cheung, FAS Support</BranchContact>
+  </Branch>
+  <Branch>
+    <BranchName>Staging</BranchName>
+    <BranchVersion>3.25.0.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>OneVue Staging</BranchDisplayName>
+    <BranchDescription>Staging for the OneVue Sales Reporting release.</BranchDescription>
+    <BranchContact>Craig Madden, Kin Cheung, FAS Support</BranchContact>
+  </Branch>
+  <Branch>
+    <BranchName>OneVueRegression</BranchName>
+    <BranchVersion>3.24.0.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>OneVue Regression</BranchDisplayName>
+    <BranchDescription>Regression Test environment</BranchDescription>
+    <BranchContact>FAS Support</BranchContact>
+  </Branch>
+
+  <Branch>
+    <BranchDisplayName>---</BranchDisplayName>
+  </Branch>
+  <Branch>
+    <BranchName>onevue_sales_uat</BranchName>
+    <BranchVersion>3.25.0</BranchVersion>
+    <BranchRevision>527</BranchRevision>
+    <BranchDisplayName>OneVue Sales UAT</BranchDisplayName>
+    <BranchDescription>OneVue Sales UAT</BranchDescription>
+    <BranchContact>Craig Madden, Kin Cheung</BranchContact>
+  </Branch>
+  <Branch>
+    <BranchName>bogus</BranchName>
+    <BranchVersion>3.24.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>bogus</BranchDisplayName>
+    <BranchDescription>test</BranchDescription>
+    <BranchContact></BranchContact>
+  </Branch>
+  <Branch>
+    <BranchName>onevue_lifetime_annuity_uat</BranchName>
+    <BranchVersion>3.23.2</BranchVersion>
+    <BranchRevision>1200</BranchRevision>
+    <BranchDisplayName>OneVue Lifetime Annuity UAT</BranchDisplayName>
+    <BranchDescription>COL WCF Quote fix UAT</BranchDescription>
+    <BranchContact>Kin Cheung</BranchContact>
+  </Branch>
+
+  <Branch>
+    <BranchDisplayName>---</BranchDisplayName>
+  </Branch>
+
+  <Branch>
+    <BranchName>DocuVue_UAT</BranchName>
+    <BranchVersion>1.9.0.1</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchWorkingDirectory>C:\OneVueLauncherWork</BranchWorkingDirectory>
+    <BranchDisplayName>DocuVue UAT</BranchDisplayName>
+    <BranchExeName>Pentafin.DocuVue.MainPanel.DocuVueWindow.exe</BranchExeName>
+    <BranchDescription>DocuVue UAT for Sales UAT</BranchDescription>
+    <BranchContact>Richard Kam/Lawrence Fung</BranchContact>
+  </Branch>
+
+  <Branch>
+    <BranchName>DocuVue_REG</BranchName>
+    <BranchVersion>1.9.0.1</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>DocuVue Regression</BranchDisplayName>
+    <BranchExeName>Pentafin.DocuVue.MainPanel.DocuVueWindow.exe</BranchExeName>
+    <BranchDescription>DocuVue Regression</BranchDescription>
+    <BranchContact>Richard Kam/Lawrence Fung</BranchContact>
+  </Branch>
+
+  <Branch>
+    <BranchName>DocuVue_STG</BranchName>
+    <BranchVersion>1.9.0.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>DocuVue Staging</BranchDisplayName>
+    <BranchExeName>Pentafin.DocuVue.MainPanel.DocuVueWindow.exe</BranchExeName>
+    <BranchDescription>DocuVue Staging Release for AXA functionality gap</BranchDescription>
+    <BranchContact>Lawrence Fung/Hue Ha</BranchContact>
+  </Branch>
+
+  <Branch>
+    <BranchDisplayName>---</BranchDisplayName>
+  </Branch>
+
+  <Branch>
+    <BranchName>Production_Support</BranchName>
+    <BranchVersion>3.11.3.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>OneVue Production Support UAT</BranchDisplayName>
+    <BranchDescription>OneVue ProdSupport UAT Environment</BranchDescription>
+    <BranchContact>Kin Cheung / Craig Madden</BranchContact>
+  </Branch>
+
+  <Branch>
+    <BranchDisplayName>---</BranchDisplayName>
+  </Branch>
+
+  <Branch>
+    <BranchName>AnnuitiesFVUtility</BranchName>
+    <BranchVersion>1.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>OneVue Annuities FV Utility</BranchDisplayName>
+    <BranchExeName>AnnuitiesFVUtility.exe</BranchExeName>
+    <BranchDescription>
+      Runs Annuity FUNDVALs and Income Payment jobs for a period of time.
+      See C:\svn_testing\fas\onevuereleases2009\launcher.fas.au.challenger.net\AnnuitiesFVUtility\Readme_AnnuitiesFVUtility.doc
+    </BranchDescription>
+    <BranchContact>Kin Cheung / Craig Madden</BranchContact>
+  </Branch>
+</Branches>
