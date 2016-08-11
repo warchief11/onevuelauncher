@@ -1,4 +1,0 @@
-C:\FAS\fas_tools\GitPlayArea\onevuelauncher.ConvertedToC#\obj\Debug\OneVue Launcher.Converted.csprojResolveAssemblyReference.cache
-C:\FAS\fas_tools\GitPlayArea\onevuelauncher.ConvertedToC#\obj\Debug\OneVueLauncher.frmCheckout.resources
-C:\FAS\fas_tools\GitPlayArea\onevuelauncher.ConvertedToC#\obj\Debug\OneVueLauncher.frmLauncher.resources
-C:\FAS\fas_tools\GitPlayArea\onevuelauncher.ConvertedToC#\obj\Debug\OneVue Launcher.Converted.csproj.GenerateResource.Cache
