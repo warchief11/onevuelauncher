@@ -152,7 +152,9 @@ REM C:\svn\fas_tools\AssemblyInfoUpdater\AssemblyInfoUpdater\bin\Debug\AssemblyI
     <Compile Include="frmLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyNamespaceSupportForCSharp.cs" />
+    <Compile Include="frmLauncher.Designer.cs">
+      <DependentUpon>frmLauncher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +167,10 @@ REM C:\svn\fas_tools\AssemblyInfoUpdater\AssemblyInfoUpdater\bin\Debug\AssemblyI
   </ItemGroup>
   <ItemGroup>
     <Content Include="Branches.xml" />
+    <Content Include="Data\Branches.xml" />
+    <Content Include="Data\Training.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Images\cancel.jpg" />
     <Content Include="Images\OK.jpg" />
     <Content Include="Transfer.ico" />
