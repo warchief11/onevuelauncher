@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using libSVN;
 using System.IO;
+using LibGit2Sharp;
 namespace OneVueLauncher
 {
 	/// <summary>
@@ -117,6 +118,8 @@ namespace OneVueLauncher
 			get { return _error_message; }
 		}
 
+        public Branch CheckoutBranch { get; set; }
+        
 		#region " Background worker "
 		/// <summary>
 		/// Displays the progress.
@@ -372,6 +375,10 @@ namespace OneVueLauncher
 		private void frmCheckout_Load(System.Object sender, System.EventArgs e)
 		{
 			this.DialogResult = System.Windows.Forms.DialogResult.None;
+            if(this.CheckoutBranch != null && CheckoutBranch.SourceControl == SourceControl.Git)
+            {
+                DownloadGitBranch();
+            }
 			if (IsValid()) {
 				btnCancel.Enabled = true;
 				ProgressBar1.Value = 0;
@@ -386,6 +393,42 @@ namespace OneVueLauncher
 				this.DialogResult = System.Windows.Forms.DialogResult.Abort;
 			}
 		}
+
+        private void DownloadGitBranch()
+        {
+            var workingDir = Path.Combine(frmLauncher.GitWorkingDirPath, CheckoutBranch.BranchName);
+            var sourceURL = frmLauncher.Repository_uri_git + CheckoutBranch.BranchName; 
+            //repository does not exist
+            if (!Repository.IsValid(workingDir))
+            {
+                //clone remote repository locally
+                Repository.Clone(sourceURL, workingDir);
+            }
+            else
+            {
+                //repository already exists
+                using (var repo = new Repository(workingDir))
+                {
+                    FetchOptions options = new FetchOptions();
+                    //options.CredentialsProvider = new LibGit2Sharp.Handlers.CredentialsHandler(
+                    //    (url, usernameFromUrl, types) =>
+                    //        new UsernamePasswordCredentials()
+                    //        {
+                    //            Username = "USERNAME",
+                    //            Password = "Password"
+                    //        });
+                    var isFullyMerged = repo.Index.IsFullyMerged;
+                    var currBranch = repo.Branches["origin/master"];
+                    repo.Fetch("origin");
+                    //repo.Network.Fetch(remote, options);
+                    repo.Merge(currBranch, new Signature(new Identity("nsingh", "nsingh@challenger.com.au"), new DateTimeOffset(2011, 06, 16, 10, 58, 27, TimeSpan.FromHours(2))));
+                    if(!repo.Index.IsFullyMerged)
+                    {
+                        MessageBox.Show("Error! Branch not merged successfully");
+                    }
+                }
+            }
+        }
 
 		/// <summary>
 		/// Checkout validation routine.

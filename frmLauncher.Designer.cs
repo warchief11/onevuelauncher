@@ -36,6 +36,9 @@ namespace OneVueLauncher
             this.cboBranches = new System.Windows.Forms.ComboBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.grpBranch = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cboGitTesting = new System.Windows.Forms.ComboBox();
+            this.radGitTesting = new System.Windows.Forms.RadioButton();
             this.pnlTraining = new System.Windows.Forms.Panel();
             this.cboTraining = new System.Windows.Forms.ComboBox();
             this.radTraining = new System.Windows.Forms.RadioButton();
@@ -58,14 +61,11 @@ namespace OneVueLauncher
             this.btnCancel = new System.Windows.Forms.Button();
             this.ErrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblStatus = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cboGitTesting = new System.Windows.Forms.ComboBox();
-            this.rbGitTesting = new System.Windows.Forms.RadioButton();
             this.grpBranch.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlTraining.SuspendLayout();
             this.grpDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // radProduction
@@ -126,6 +126,36 @@ namespace OneVueLauncher
             this.grpBranch.TabIndex = 4;
             this.grpBranch.TabStop = false;
             this.grpBranch.Text = "OneVue";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cboGitTesting);
+            this.panel1.Controls.Add(this.radGitTesting);
+            this.panel1.Location = new System.Drawing.Point(4, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(366, 28);
+            this.panel1.TabIndex = 13;
+            // 
+            // cboGitTesting
+            // 
+            this.cboGitTesting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGitTesting.Enabled = false;
+            this.cboGitTesting.Location = new System.Drawing.Point(100, 3);
+            this.cboGitTesting.Name = "cboGitTesting";
+            this.cboGitTesting.Size = new System.Drawing.Size(256, 21);
+            this.cboGitTesting.TabIndex = 3;
+            this.cboGitTesting.SelectedIndexChanged += new System.EventHandler(this.cboGitTesting_SelectedIndexChanged);
+            // 
+            // radGitTesting
+            // 
+            this.radGitTesting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.radGitTesting.Location = new System.Drawing.Point(4, 3);
+            this.radGitTesting.Name = "radGitTesting";
+            this.radGitTesting.Size = new System.Drawing.Size(72, 23);
+            this.radGitTesting.TabIndex = 7;
+            this.radGitTesting.Text = "git testing";
+            this.radGitTesting.UseVisualStyleBackColor = false;
+            this.radGitTesting.CheckedChanged += new System.EventHandler(this.radGitTesting_CheckedChanged);
             // 
             // pnlTraining
             // 
@@ -348,36 +378,6 @@ namespace OneVueLauncher
             this.lblStatus.Size = new System.Drawing.Size(160, 23);
             this.lblStatus.TabIndex = 8;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cboGitTesting);
-            this.panel1.Controls.Add(this.rbGitTesting);
-            this.panel1.Location = new System.Drawing.Point(4, 111);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 28);
-            this.panel1.TabIndex = 13;
-            // 
-            // cboGitTesting
-            // 
-            this.cboGitTesting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGitTesting.Enabled = false;
-            this.cboGitTesting.Location = new System.Drawing.Point(100, 3);
-            this.cboGitTesting.Name = "cboGitTesting";
-            this.cboGitTesting.Size = new System.Drawing.Size(256, 21);
-            this.cboGitTesting.TabIndex = 3;
-            this.cboGitTesting.SelectedIndexChanged += new System.EventHandler(this.cboGitTesting_SelectedIndexChanged);
-            // 
-            // rbGitTesting
-            // 
-            this.rbGitTesting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rbGitTesting.Location = new System.Drawing.Point(4, 3);
-            this.rbGitTesting.Name = "rbGitTesting";
-            this.rbGitTesting.Size = new System.Drawing.Size(72, 23);
-            this.rbGitTesting.TabIndex = 7;
-            this.rbGitTesting.Text = "git testing";
-            this.rbGitTesting.UseVisualStyleBackColor = false;
-            this.rbGitTesting.Click += new System.EventHandler(this.rbGitTesting_Click);
-            // 
             // frmLauncher
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -400,10 +400,10 @@ namespace OneVueLauncher
             this.Load += new System.EventHandler(this.frmLauncher_Load);
             this.grpBranch.ResumeLayout(false);
             this.grpBranch.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.pnlTraining.ResumeLayout(false);
             this.grpDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -436,6 +436,6 @@ namespace OneVueLauncher
         internal System.Windows.Forms.Label lblStatus;
         internal Panel panel1;
         internal ComboBox cboGitTesting;
-        internal RadioButton rbGitTesting;
+        internal RadioButton radGitTesting;
     }
 }

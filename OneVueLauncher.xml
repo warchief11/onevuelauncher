@@ -215,16 +215,6 @@
             <returns>A random string of alpha-numeric characters</returns>
             <remarks></remarks>
         </member>
-        <member name="M:OneVueLauncher.frmLauncher.LoadBranchCombo">
-            <summary>
-            Load the combo that displays the list of Branches
-            </summary>
-        </member>
-        <member name="M:OneVueLauncher.frmLauncher.LoadTrainingCombo">
-            <summary>
-            Load the combo that displays the list of Branches
-            </summary>
-        </member>
         <member name="M:OneVueLauncher.frmLauncher.radProduction_CheckedChanged(System.Object,System.EventArgs)">
             <summary>
             If Production radio button activated 

@@ -8,4 +8,13 @@
 		<BranchDescription>OneVue Training environment, database hosted on SSYDNSQL016.</BranchDescription>
 		<BranchContact>Lawrence Fung/Kin Cheung</BranchContact>
 	</Branch>
+  <Branch>
+    <BranchName>onevuelauncher</BranchName>
+    <BranchVersion>3.0.1.0</BranchVersion>
+    <BranchRevision>HEAD</BranchRevision>
+    <BranchDisplayName>One Vue Launcher</BranchDisplayName>
+    <BranchDescription>OneVue Launcher Development branch.</BranchDescription>
+    <BranchContact>Nardeep Singh</BranchContact>
+    <SourceControl>Git</SourceControl>
+  </Branch>
 </Branches>

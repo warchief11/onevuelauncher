@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Branches>
+    <Branch>
+        <BranchName>GitTesting</BranchName>
+        <BranchVersion>3.58.0.0</BranchVersion>
+        <BranchRevision>HEAD</BranchRevision>
+        <BranchDisplayName>Git Testing</BranchDisplayName>
+        <BranchDescription>Git Testing</BranchDescription>
+        <BranchContact>Nardeep Singh</BranchContact>
+    </Branch>
+</Branches>

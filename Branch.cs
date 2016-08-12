@@ -26,7 +26,13 @@ namespace OneVueLauncher
 		public string BranchDescription;
 		public string BranchContact;
 		public string BranchExeName;
-
+        public SourceControl SourceControl;
 		public string BranchWorkingDirectory;
 	}
+
+    public enum SourceControl
+    {
+        Svn = 0,
+        Git
+    }
 }
